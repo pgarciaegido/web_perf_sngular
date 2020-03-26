@@ -1,0 +1,23 @@
+{
+  "name": "web_perf_sngular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "analyze": "webpack-bundle-analyzer --port 4200 dist/stats.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "lodash-es": "^4.17.15"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
