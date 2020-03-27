@@ -3,10 +3,13 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    worker: './src/worker.js'
+  },
   mode: 'development',
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
@@ -15,6 +18,8 @@ module.exports = {
       generateStatsFile: true,
       statsOptions: { source: false }
     }),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    })
   ]
 };
